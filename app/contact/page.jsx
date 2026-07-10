@@ -3,10 +3,8 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 
 const contacts = [
-  ["Email", "infobramandcollp@gmail.com", "mailto:infobramandcollp@gmail.com"],
-  ["Mobile", "+91 9999289826", "tel:+919999289826"],
-  ["Mobile", "+91 9910118586", "tel:+919910118586"],
-  ["Mobile", "+91 8860930404", "tel:+918860930404"],
+  ["Email", "infobramcollp@gmail.com", "mailto:infobramcollp@gmail.com"],
+  ["Mobile", "+91 9718324334", "tel:+919718324334"],
 ];
 
 const offices = [
@@ -19,7 +17,10 @@ const offices = [
 export const metadata = {
   title: "Contact BRAM & Co. LLP",
   description:
-    "Contact BRAM & Co. LLP for audit, tax, GST, MCA, cost audit, accounting, and advisory services.",
+    "Contact BRAM & Co. LLP in Noida for audit, GST, income tax, cost audit, MCA compliance, bookkeeping and advisory support.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

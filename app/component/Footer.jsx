@@ -43,11 +43,11 @@ export default function Footer() {
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c7a15a]">Contact</p>
           <div className="mt-4 grid gap-2 text-[#d8d2c5]">
-            <a href="mailto:infobramandcollp@gmail.com" className="transition hover:text-[#f1d79d]">
-              infobramandcollp@gmail.com
+            <a href="mailto:infobramcollp@gmail.com" className="transition hover:text-[#f1d79d]">
+              infobramcollp@gmail.com
             </a>
-            <a href="tel:+919999289826" className="transition hover:text-[#f1d79d]">
-              +91 9999289826
+            <a href="tel:+919718324334" className="transition hover:text-[#f1d79d]">
+              +91 9718324334
             </a>
             <p className="leading-6 text-[#bdb5a8]">B-33, First Floor, Sector 63, Noida 201301</p>
           </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -30,15 +31,16 @@ export default function Header({ fixed = false }) {
     >
       <div className="h-1 bg-[#c7a15a]" />
       <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <Link href="/" className="group flex min-w-0 items-center gap-3" aria-label="BRAM & Co. home">
-          <span className="grid size-12 shrink-0 place-items-center border border-[#e2c27d]/60 bg-[#c7a15a] text-base font-black text-[#17201d] shadow-[0_10px_24px_rgba(199,161,90,0.24)] transition group-hover:bg-[#f1d79d]">
-            B
-          </span>
-          <span className="min-w-0">
-            <span className="block truncate text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
-            <span className="mt-0.5 block truncate text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d8d2c5]">
-              Chartered & Cost Accountants
-            </span>
+        <Link href="/" className="group flex min-w-0 items-center" aria-label="BRAM & Co. home">
+          <span className="relative block h-16 w-16 shrink-0 overflow-hidden drop-shadow-[0_12px_24px_rgba(0,0,0,0.28)] transition duration-300 group-hover:brightness-110 sm:h-[72px] sm:w-[72px]">
+            <Image
+              src="/bram-logo-transparent.png"
+              alt="BRAM & Co. LLP logo"
+              fill
+              priority
+              sizes="72px"
+              className="object-contain"
+            />
           </span>
         </Link>
 
@@ -60,7 +62,7 @@ export default function Header({ fixed = false }) {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="tel:+919999289826"
+            href="tel:+919718324334"
             className="border border-[#c7a15a]/70 px-4 py-2 text-sm font-bold text-[#f8e8c2] transition hover:bg-[#c7a15a] hover:text-[#17201d]"
           >
             Call office
@@ -116,7 +118,7 @@ export default function Header({ fixed = false }) {
               </Link>
             ))}
             <a
-              href="tel:+919999289826"
+              href="tel:+919718324334"
               className="border border-[#c7a15a]/70 px-4 py-3 text-center font-bold text-[#f8e8c2]"
             >
               Call office

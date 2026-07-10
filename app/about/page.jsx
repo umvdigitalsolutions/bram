@@ -1,9 +1,12 @@
 import AboutClient from "./AboutClient";
 
 export const metadata = {
-  title: "About BRAM & Co. LLP | Chartered Accountants and Cost Accountants",
+  title: "About the Firm",
   description:
-    "About BRAM & Co. LLP, a Noida-headquartered CA and cost accounting firm serving audit, tax, GST, MCA, and advisory clients.",
+    "Learn about BRAM & Co. LLP's Noida-led CA and cost accounting team, partner profiles, office network and legal consultant support.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

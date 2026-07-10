@@ -12,9 +12,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "BRAM & Co. LLP | Chartered Accountants and Cost Accountants",
+  metadataBase: new URL("https://bramcollp.com"),
+  title: {
+    default: "BRAM & Co. LLP | CA, Cost Accountants, GST & Audit Firm in Noida",
+    template: "%s | BRAM & Co. LLP",
+  },
   description:
-    "Premium chartered accountancy, cost audit, GST, tax, MCA compliance, bookkeeping, and advisory services from BRAM & Co. LLP.",
+    "Noida CA and cost accountants firm for audit, cost audit, GST, income tax, MCA compliance, bookkeeping and business advisory.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "BRAM & Co. LLP",
+    description:
+      "Chartered accountants and cost accountants in Noida for audit, GST, tax, MCA compliance and finance advisory.",
+    url: "https://bramcollp.com",
+    siteName: "BRAM & Co. LLP",
+    images: [{ url: "/bram-logo-transparent.png", width: 1254, height: 1254, alt: "BRAM & Co. LLP logo" }],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "BRAM & Co. LLP",
+    description:
+      "Noida CA and cost accountants firm for audit, GST, tax, MCA compliance and advisory.",
+    images: ["/bram-logo-transparent.png"],
+  },
 };
 
 export default function RootLayout({ children }) {

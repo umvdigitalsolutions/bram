@@ -122,13 +122,46 @@ const networkPartners = [
   },
 ];
 
+const legalConsultants = [
+  {
+    name: "Adv. Pritam",
+    role: "Legal Consultant",
+    credential: "Advocate",
+    office: "Legal advisory desk",
+    focus:
+      "Adv. Pritam supports Delhi High Court, commerce and corporate legal matters for clients who need coordinated legal guidance alongside finance and compliance work.",
+    profile:
+      "Adv. Pritam is a legal consultant associated with the BRAM professional network and is not a partner of the firm. Based around Delhi High Court practice, he handles legal matters connected with commerce, corporate work, contracts, business documentation, notices, representation preparation and dispute-linked advisory for clients requiring coordinated legal support.",
+    image: "/partners/pritam.png",
+    imageClass: "object-contain object-top",
+  },
+];
+
+const legalSupportAreas = [
+  {
+    title: "Court coordination",
+    detail:
+      "Delhi High Court, commerce and corporate legal matters can be coordinated when a client assignment needs legal inputs.",
+  },
+  {
+    title: "Documents and notices",
+    detail:
+      "Support for legal documentation, notice replies, representation preparation and contract-linked review.",
+  },
+  {
+    title: "Business matters",
+    detail:
+      "Commercial and corporate legal inputs where a finance, tax, GST or MCA matter needs legal coordination.",
+  },
+];
+
 const officeNetwork = [
   {
     type: "Head office",
     location: "Noida",
     lead: "Manish Malik, Ayush Khandelwal, Akshay Sharma and Renu Sehgal",
     address: "B-33, First Floor, Sector 63, Noida 201301",
-    contact: "+91 9999289826, +91 9910118586, +91 8860930404",
+    contact: "+91 9718324334",
     description:
       "The head office coordinates partner-led audit, tax, GST, cost accounting, MCA, bookkeeping and advisory delivery for the wider office network.",
   },
@@ -146,7 +179,7 @@ const officeNetwork = [
     location: "Kundli, Sonipat",
     lead: "Bharat Singh Prajapat",
     address: "15, 1st Floor, Khatri Market, Near Makhan Bhog, Kundli, Sonipat 121028",
-    contact: "+91 8295201044",
+    contact: "+91 9718324334",
     description:
       "The Sonipat branch provides local coverage for clients around Kundli, including document coordination, compliance follow-up and branch-level client support.",
   },
@@ -155,7 +188,7 @@ const officeNetwork = [
     location: "Guwahati, Assam",
     lead: "Dr Aman Singh and Kuranganayani Chetia",
     address: "Phunu Chetia Complex, Bataguli, Panjabari Main Road, Guwahati, Assam 781037",
-    contact: "+91 9811008817 | bramco.ghy@gmail.com",
+    contact: "+91 9718324334 | infobramcollp@gmail.com",
     description:
       "The Assam office extends BRAM's services and courses presence with education, training, operations and regional client coordination capability.",
   },
@@ -173,7 +206,7 @@ const officeNetwork = [
     location: "Mira Road East, Thane, Mumbai",
     lead: "Ekta Parmar",
     address: "33, Rohini Complex, Sector 3, Mira Road East, Thane 401107",
-    contact: "+91 9768165558",
+    contact: "+91 9718324334",
     description:
       "The Mumbai associate office supports company secretarial and corporate law coordination through a specialist professional network.",
   },
@@ -182,7 +215,7 @@ const officeNetwork = [
     location: "Sector 63, Noida",
     lead: "Renu Sehgal, MM & Co.",
     address: "B-33, FF-02, Sector 63, Noida 201301",
-    contact: "+91 7290821910 | mmcocma@gmail.com",
+    contact: "+91 9718324334 | infobramcollp@gmail.com",
     description:
       "The associated cost accountants office strengthens BRAM's CMA bench for cost audit, cost records, cost controls and sector-specific reporting.",
   },
@@ -362,7 +395,7 @@ export default function AboutClient() {
             <h2 className="mt-4 text-4xl font-semibold tracking-normal">Experienced hands, direct accountability.</h2>
           </div>
           <p className="text-base leading-7 text-[#5b665f]">
-            The leadership bench combines head-office technical control, Delhi branch accessibility, and Renu Sehgal&apos;s cost-accounting desk, giving clients clear ownership across audit, tax, GST, MCA, accounting, cost records and advisory assignments.
+            The leadership bench combines Manish Malik, Ayush Khandelwal, Akshay Sharma, Rishab Jain, Bhawana Jain and Renu Sehgal across head-office control, Delhi accessibility, audit, tax, GST, MCA, accounting, cost records and advisory assignments.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -430,7 +463,7 @@ export default function AboutClient() {
             <h2 className="mt-4 text-4xl font-semibold tracking-normal">Specialist support around the leadership bench.</h2>
           </div>
           <p className="text-base leading-7 text-[#5b665f]">
-            The network partner profiles represent branch and associate professionals named in the firm profile. They extend reach, client coordination and specialist execution across locations, while cost accounting leadership is anchored by Renu Sehgal.
+            The network partner profiles represent branch and associate professionals named in the firm profile. They extend reach, client coordination and specialist execution while the core partner bench remains collectively responsible for delivery.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -460,6 +493,65 @@ export default function AboutClient() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-14 sm:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-6 grid gap-4 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">Extended support</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-normal text-[#17201d]">
+                Legal coordination when required.
+              </h2>
+            </div>
+            <p className="text-sm leading-7 text-[#5b665f]">
+              This is a supporting desk for clients whose finance or compliance matter also needs legal inputs. It is intentionally separate from the partner and network partner profiles.
+            </p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {legalConsultants.map((consultant) => (
+              <article key={consultant.name} className="border border-[#ddd3c0] bg-[#f7f5ef] p-4">
+                <div className="flex items-center gap-4">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedPartner(consultant)}
+                    className="relative size-20 shrink-0 overflow-hidden border border-[#ddd3c0] bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c7a15a]"
+                    aria-label={`Open ${consultant.name} detailed profile`}
+                  >
+                    <Image
+                      src={consultant.image}
+                      alt={`${consultant.name} profile photo`}
+                      fill
+                      sizes="80px"
+                      className={consultant.imageClass}
+                    />
+                  </button>
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a6b2f]">{consultant.role}</p>
+                    <h3 className="mt-2 text-xl font-semibold tracking-normal text-[#17201d]">{consultant.name}</h3>
+                    <p className="mt-1 text-xs font-semibold leading-5 text-[#516057]">{consultant.credential}</p>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm leading-6 text-[#5b665f]">
+                  Delhi High Court, commerce and corporate legal matter support.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setSelectedPartner(consultant)}
+                  className="mt-4 inline-flex h-10 w-full items-center justify-center border border-[#17201d] px-4 text-xs font-bold text-[#17201d] transition hover:bg-[#17201d] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c7a15a]"
+                >
+                  View consultant profile
+                </button>
+              </article>
+            ))}
+            {legalSupportAreas.map((area) => (
+              <article key={area.title} className="border border-[#ddd3c0] bg-[#f7f5ef] p-4">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8a6b2f]">{area.title}</p>
+                <p className="mt-3 text-sm leading-6 text-[#5b665f]">{area.detail}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

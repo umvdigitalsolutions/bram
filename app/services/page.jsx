@@ -14,9 +14,12 @@ const services = [
 ];
 
 export const metadata = {
-  title: "Services | BRAM & Co. LLP",
+  title: "Audit, GST, Tax, MCA and Cost Accounting Services",
   description:
-    "Audit, cost accounting, GST, tax, MCA, bookkeeping, transfer pricing, customs, and advisory services from BRAM & Co. LLP.",
+    "Explore BRAM & Co. LLP services for statutory audit, cost audit, GST, income tax, MCA compliance, bookkeeping and finance advisory.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {
