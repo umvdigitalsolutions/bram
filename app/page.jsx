@@ -348,7 +348,7 @@ export default function Home() {
             <span>
               <span className="block text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
               <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">
-                Chartered Accountants
+                Chartered & Cost Accountants
               </span>
             </span>
           </a>
@@ -388,7 +388,7 @@ export default function Home() {
               Precision finance for companies that cannot afford uncertainty.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#ede7dc]">
-              BRAM & Co. LLP is a Noida-headquartered firm of Chartered Accountants and Cost Accountants advising businesses on audit, tax, GST, cost records, MCA compliance, bookkeeping, transfer pricing, customs, and assessments.
+              BRAM & Co. LLP is a Noida-headquartered firm of Chartered Accountants and Cost Accountants, led by a CA and CMA-focused bench including Renu Sehgal for cost-accounting assignments, advising businesses on audit, tax, GST, cost records, MCA compliance, bookkeeping, transfer pricing, customs, and assessments.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a href="#contact" className="inline-flex h-12 items-center justify-center bg-[#c7a15a] px-6 text-sm font-bold text-[#17201d] transition hover:bg-[#e0bd73]">
@@ -415,7 +415,7 @@ export default function Home() {
               ))}
             </div>
             <p className="mt-6 text-sm leading-6 text-[#ede7dc]">
-              Led by Manish Malik, Ayush Khandelwal, Akshay Sharma, Rishab Jain, and Bhawana Jain, the firm combines profile-level rigor with hands-on client service.
+              Led by Manish Malik, Ayush Khandelwal, Akshay Sharma, Rishab Jain, Bhawana Jain, and Renu Sehgal, the firm combines profile-level rigor, cost-accounting depth, and hands-on client service.
             </p>
           </aside>
         </div>
@@ -682,7 +682,7 @@ export default function Home() {
 
       <footer className="border-t border-[#d8c08a]/30 bg-[#111815] px-5 py-8 text-sm text-[#c7c1b6] sm:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 sm:flex-row">
-          <p>BRAM & Co. LLP, Chartered Accountants</p>
+          <p>BRAM & Co. LLP, Chartered Accountants and Cost Accountants</p>
           <p>Professional website concept built from the firm profile and public CPA service patterns.</p>
         </div>
       </footer>

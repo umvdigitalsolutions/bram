@@ -556,7 +556,7 @@ export default function ToolsClient() {
             <span className="grid size-11 place-items-center rounded bg-[#c7a15a] text-sm font-black text-[#17201d]">B</span>
             <span>
               <span className="block text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
-              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered Accountants</span>
+              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered & Cost Accountants</span>
             </span>
           </Link>
           <nav className="hidden items-center gap-7 text-sm text-[#ede7dc] md:flex">

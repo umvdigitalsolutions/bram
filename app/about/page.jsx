@@ -51,6 +51,16 @@ const partners = [
     profile:
       "Bhawana supports the branch office network with a focus on disciplined compliance execution and client communication. Her role reinforces BRAM's ability to serve clients through both head-office expertise and local branch accessibility.",
   },
+  {
+    name: "Renu Sehgal",
+    role: "Cost Accounting Lead / Associate Partner",
+    credential: "Cost Accountant, MM & Co.",
+    office: "Sector 63, Noida",
+    focus:
+      "Leads the cost accountants desk for cost audit, cost records, cost control, CMA reporting and sector-specific cost compliance.",
+    profile:
+      "Renu Sehgal strengthens the leadership bench with dedicated cost accounting capability through MM & Co. Her role brings focused CMA depth to manufacturing, infrastructure and other regulated sectors where cost records, cost audit and cost control discipline are critical.",
+  },
 ];
 
 const networkPartners = [
@@ -70,21 +80,13 @@ const networkPartners = [
     profile:
       "Ekta leads the Mumbai associate company secretarial desk. The association supports corporate law, secretarial, board documentation and filing-linked coordination where clients need specialist company law execution.",
   },
-  {
-    name: "Renu Sehgal",
-    role: "Associate Partner",
-    credential: "Cost Accountants, MM & Co.",
-    office: "Sector 63, Noida",
-    profile:
-      "Renu leads the associated cost accountants desk through MM & Co. The association deepens BRAM's cost records, cost audit, cost control and CMA capability for manufacturing, infrastructure and other regulated sectors.",
-  },
 ];
 
 const officeNetwork = [
   {
     type: "Head office",
     location: "Noida",
-    lead: "Manish Malik, Ayush Khandelwal and Akshay Sharma",
+    lead: "Manish Malik, Ayush Khandelwal, Akshay Sharma and Renu Sehgal",
     address: "B-33, First Floor, Sector 63, Noida 201301",
     contact: "+91 9999289826, +91 9910118586, +91 8860930404",
     description:
@@ -145,7 +147,7 @@ const strengths = [
 ];
 
 export const metadata = {
-  title: "About BRAM & Co. LLP | Chartered Accountants",
+  title: "About BRAM & Co. LLP | Chartered Accountants and Cost Accountants",
   description:
     "About BRAM & Co. LLP, a Noida-headquartered CA and cost accounting firm serving audit, tax, GST, MCA, and advisory clients.",
 };
@@ -159,7 +161,7 @@ export default function AboutPage() {
             <span className="grid size-11 place-items-center rounded bg-[#c7a15a] text-sm font-black text-[#17201d]">B</span>
             <span>
               <span className="block text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
-              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered Accountants</span>
+              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered & Cost Accountants</span>
             </span>
           </Link>
           <nav className="hidden items-center gap-7 text-sm text-[#ede7dc] md:flex">
@@ -178,15 +180,15 @@ export default function AboutPage() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#f1d79d]">About the firm</p>
             <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-tight tracking-normal sm:text-6xl">
-              Partner-led assurance and compliance for modern Indian businesses.
+              CA and cost-accounting leadership for modern Indian businesses.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-[#d8d2c5]">
-              BRAM & Co. LLP was established on 20.12.2022 and has grown as a one-point professional service enterprise for chartered accountancy, cost accounting, GST, audit, tax, and corporate compliance work.
+              BRAM & Co. LLP was established on 20.12.2022 and has grown as a one-point professional service enterprise for chartered accountancy, cost accountancy, GST, audit, tax, and corporate compliance work.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              ["5", "Core partners"],
+              ["6", "Leadership profiles"],
               ["6", "Network offices"],
               ["17+", "Team members"],
               ["18", "Practice areas"],
@@ -207,7 +209,7 @@ export default function AboutPage() {
             <h2 className="mt-4 text-4xl font-semibold tracking-normal">Experienced hands, direct accountability.</h2>
           </div>
           <p className="text-base leading-7 text-[#5b665f]">
-            The core partner bench combines head-office technical control with Delhi branch accessibility, giving clients clear ownership across audit, tax, GST, MCA, accounting and advisory assignments.
+            The leadership bench combines head-office technical control, Delhi branch accessibility, and Renu Sehgal&apos;s cost-accounting desk, giving clients clear ownership across audit, tax, GST, MCA, accounting, cost records and advisory assignments.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -260,13 +262,13 @@ export default function AboutPage() {
         <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">Network partners</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-normal">Specialist support around the core partner bench.</h2>
+            <h2 className="mt-4 text-4xl font-semibold tracking-normal">Specialist support around the leadership bench.</h2>
           </div>
           <p className="text-base leading-7 text-[#5b665f]">
-            The network partner profiles represent branch and associate professionals named in the firm profile. They extend reach, client coordination and specialist execution across locations.
+            The network partner profiles represent branch and associate professionals named in the firm profile. They extend reach, client coordination and specialist execution across locations, while cost accounting leadership is anchored by Renu Sehgal.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           {networkPartners.map((partner) => (
             <article key={partner.name} className="border border-[#ddd3c0] bg-white p-6 shadow-sm">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#8a6b2f]">{partner.role}</p>

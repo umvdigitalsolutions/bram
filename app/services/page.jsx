@@ -26,7 +26,7 @@ export default function ServicesPage() {
             <span className="grid size-11 place-items-center rounded bg-[#c7a15a] text-sm font-black text-[#17201d]">B</span>
             <span>
               <span className="block text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
-              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered Accountants</span>
+              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered & Cost Accountants</span>
             </span>
           </Link>
           <nav className="hidden items-center gap-7 text-sm text-[#ede7dc] md:flex">
@@ -47,7 +47,7 @@ export default function ServicesPage() {
             Compliance, audit, and advisory services with one accountable finance desk.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-[#d8d2c5]">
-            Choose BRAM & Co. LLP for recurring compliance, specialist audits, assessments, or a broader outsourced finance operating rhythm.
+            Choose BRAM & Co. LLP for recurring compliance, specialist cost-accounting work, audits, assessments, or a broader outsourced finance operating rhythm.
           </p>
         </div>
       </section>

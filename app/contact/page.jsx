@@ -30,7 +30,7 @@ export default function ContactPage() {
             <span className="grid size-11 place-items-center rounded bg-[#c7a15a] text-sm font-black text-[#17201d]">B</span>
             <span>
               <span className="block text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
-              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered Accountants</span>
+              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered & Cost Accountants</span>
             </span>
           </Link>
           <nav className="hidden items-center gap-7 text-sm text-[#ede7dc] md:flex">
@@ -51,7 +51,7 @@ export default function ContactPage() {
             Talk to BRAM & Co. LLP about your next compliance or finance requirement.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-[#d8d2c5]">
-            Share your audit, tax, GST, MCA, accounting, assessment, or advisory requirement and the relevant desk can coordinate the next step.
+            Share your audit, cost accounting, tax, GST, MCA, accounting, assessment, or advisory requirement and the relevant desk can coordinate the next step.
           </p>
         </div>
       </section>
