@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import PDFDocument from "pdfkit";
 
-export const toEmail = process.env.CONTACT_TO_EMAIL || "bramandcollp@gmail.com";
+export const toEmail = process.env.CONTACT_TO_EMAIL || "umvlegalassociates@gmail.com";
 
 export function clean(value) {
   return String(value || "").trim();
@@ -170,7 +170,7 @@ export function getPdfBuffer({ title, sections }) {
       doc
         .fillColor(colors.muted)
         .fontSize(8)
-        .text("BRAM & Co. LLP | bramandcollp@gmail.com | www.bramcollp.com", page.margin, y, {
+        .text("BRAM & Co. LLP | umvlegalassociates@gmail.com | www.bramcollp.com", page.margin, y, {
           width: contentWidth,
           align: "center",
         });

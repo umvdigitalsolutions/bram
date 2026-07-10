@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import Footer from "./component/Footer";
+import Header from "./component/Header";
 
 const serviceLines = [
   {
@@ -63,6 +65,58 @@ const tools = [
     copy: "Browse high-demand service shortcuts for audit, tax, planning, representation, consulting, CFO, GST, MCA, and cost work.",
     cta: "View guide",
   },
+];
+
+const clientPathways = [
+  {
+    title: "Start a new compliance relationship",
+    detail:
+      "For companies that need recurring GST, TDS, MCA, accounting, audit schedules and monthly closing discipline under one professional desk.",
+  },
+  {
+    title: "Respond to a notice or assessment",
+    detail:
+      "For income tax, GST, TDS, customs or MCA matters where documents, reconciliations and written submissions need to be pulled together quickly.",
+  },
+  {
+    title: "Prepare for audit or cost records",
+    detail:
+      "For statutory audit, internal audit, tax audit, cost audit, cost records, stock audit, fixed asset audit and management reporting readiness.",
+  },
+  {
+    title: "Strengthen finance operations",
+    detail:
+      "For owners and finance teams that need cleaner books, reconciliations, MIS, working capital visibility, payroll inputs and control review.",
+  },
+];
+
+const deliveryModel = [
+  ["1", "Scope", "Understand entity structure, registrations, due dates, open notices, audit status and document availability."],
+  ["2", "Prepare", "Create a document list, responsibility matrix and practical timeline for filings, audits, reconciliations or responses."],
+  ["3", "Execute", "Run partner-reviewed work across tax, GST, MCA, accounting, audit, cost records or advisory requirements."],
+  ["4", "Close", "Share status, filing proof, review points, working papers and next compliance actions for the client team."],
+];
+
+const sectorHighlights = [
+  "Auto components and manufacturing",
+  "Infrastructure and metro projects",
+  "Logistics, shipping and transport",
+  "Retail, technology and cloud communications",
+  "Education, healthcare and diagnostics",
+  "Hospitality, media and non-profit organizations",
+];
+
+const leadershipHighlights = [
+  "CA-led assurance, tax and corporate compliance supervision.",
+  "Renu Sehgal-led cost accounting desk for cost audit, cost records and CMA assignments.",
+  "Noida head office with Delhi, Sonipat, Mumbai and specialist associate coverage.",
+];
+
+const leadershipSnapshot = [
+  ["Manish Malik", "CA, CMA, LLB | Founder Partner", "/partners/manish-malik-profile.jpg", "object-cover object-center"],
+  ["Renu Sehgal", "M.Com, CMA | Founder Partner", "/partners/renu1.jpeg", "object-cover object-center"],
+  ["Rishab Jain", "PGDM, LLB, B.Com | Managing Partner", "/partners/rishab-jain-profile.jpg", "object-cover object-center"],
+  ["Bhawana Jain", "FCA, B.Com | Managing Partner", "/partners/bhawana-jain-profile.jpg", "object-cover object-center"],
 ];
 
 const companies = [
@@ -221,6 +275,7 @@ const offices = [
   "Head office: B-33, First Floor, Sector 63, Noida 201301",
   "Delhi: Daryaganj and Mayur Vihar Phase 3",
   "Sonipat: Khatri Market, Kundli",
+  "Assam: Guwahati branch desk at Panjabari Main Road",
   "Associates: Mumbai company secretarial office and Noida cost accountants desk",
 ];
 
@@ -339,35 +394,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#f7f5ef] text-[#17201d]">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-[#17201d]/90 text-white backdrop-blur-xl">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-          <a href="#top" className="flex items-center gap-3" aria-label="BRAM & Co. home">
-            <span className="grid size-11 place-items-center rounded bg-[#c7a15a] text-sm font-black text-[#17201d]">
-              B
-            </span>
-            <span>
-              <span className="block text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
-              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">
-                Chartered & Cost Accountants
-              </span>
-            </span>
-          </a>
-          <nav className="hidden items-center gap-7 text-sm text-[#ede7dc] md:flex">
-            <Link href="/" className="font-semibold text-[#f1d79d] hover:text-[#c7a15a]">Home</Link>
-            <Link href="/about" className="hover:text-[#c7a15a]">About</Link>
-            <Link href="/services" className="hover:text-[#c7a15a]">Services</Link>
-            <Link href="/tools" className="hover:text-[#c7a15a]">Tools</Link>
-            <Link href="/company-data" className="hover:text-[#c7a15a]">Company data</Link>
-            <Link href="/contact" className="hover:text-[#c7a15a]">Contact</Link>
-          </nav>
-          <a
-            href="tel:+919999289826"
-            className="hidden rounded border border-[#c7a15a] px-4 py-2 text-sm font-semibold text-[#f8e8c2] transition hover:bg-[#c7a15a] hover:text-[#17201d] sm:inline-flex"
-          >
-            Call office
-          </a>
-        </div>
-      </header>
+      <Header fixed />
 
       <section id="top" className="relative min-h-[760px] overflow-hidden bg-[#17201d] pt-20 text-white">
         <Image
@@ -388,7 +415,7 @@ export default function Home() {
               Precision finance for companies that cannot afford uncertainty.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#ede7dc]">
-              BRAM & Co. LLP is a Noida-headquartered firm of Chartered Accountants and Cost Accountants, led by a CA and CMA-focused bench including Renu Sehgal for cost-accounting assignments, advising businesses on audit, tax, GST, cost records, MCA compliance, bookkeeping, transfer pricing, customs, and assessments.
+              A Noida-headquartered CA and Cost Accountants firm for audit, tax, GST, cost records, MCA compliance, accounting operations and finance advisory, built for businesses that need clarity before deadlines become pressure.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a href="#contact" className="inline-flex h-12 items-center justify-center bg-[#c7a15a] px-6 text-sm font-bold text-[#17201d] transition hover:bg-[#e0bd73]">
@@ -403,10 +430,10 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.25em] text-[#f1d79d]">Firm profile</p>
             <div className="mt-6 grid grid-cols-2 gap-4">
               {[
-                ["2022", "Established"],
+                ["2016", "Practice roots"],
                 ["17+", "Team members"],
-                ["18", "Practice areas"],
-                ["4", "Office network"],
+                ["150+", "Services & courses"],
+                ["7", "Office network"],
               ].map(([value, label]) => (
                 <div key={label} className="border border-white/14 bg-[#17201d]/45 p-4">
                   <p className="text-3xl font-semibold text-white">{value}</p>
@@ -415,21 +442,52 @@ export default function Home() {
               ))}
             </div>
             <p className="mt-6 text-sm leading-6 text-[#ede7dc]">
-              Led by Manish Malik, Ayush Khandelwal, Akshay Sharma, Rishab Jain, Bhawana Jain, and Renu Sehgal, the firm combines profile-level rigor, cost-accounting depth, and hands-on client service.
+              Leadership combines CA supervision, Renu Sehgal&apos;s cost-accounting desk, and branch-level coordination across Noida, Delhi, Sonipat and associate offices.
             </p>
           </aside>
         </div>
       </section>
 
-      <section className="border-b border-[#ded6c6] bg-white py-5">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-8 gap-y-3 px-5 text-sm text-[#516057] sm:px-8">
-          <strong className="text-[#17201d]">Practice experience includes:</strong>
-          <span>Cost audit</span>
-          <span>GST and tax audit</span>
-          <span>Internal audit</span>
-          <span>Statutory audit</span>
-          <span>MCA compliance</span>
-          <span>Assessments and appeals</span>
+      <section className="border-b border-[#ded6c6] bg-white py-6">
+        <div className="mx-auto grid max-w-7xl gap-4 px-5 text-sm text-[#516057] sm:px-8 md:grid-cols-3">
+          {leadershipHighlights.map((item) => (
+            <div key={item} className="border-l-4 border-[#c7a15a] bg-[#f7f5ef] px-4 py-3 font-semibold text-[#344039]">
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+        <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">Leadership snapshot</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-normal text-[#17201d] sm:text-5xl">
+              Partner faces behind the delivery desk.
+            </h2>
+          </div>
+          <p className="max-w-xl text-base leading-7 text-[#5b665f]">
+            The PDF profile adds partner photographs and reinforces BRAM&apos;s accessible, approachable and accountable client service style.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {leadershipSnapshot.map(([name, role, image, imageClass]) => (
+            <article key={name} className="overflow-hidden border border-[#ddd3c0] bg-white shadow-sm">
+              <div className="relative aspect-[4/3] bg-white">
+                <Image
+                  src={image}
+                  alt={`${name} profile photo`}
+                  fill
+                  sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  className={imageClass}
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-xl font-semibold tracking-normal text-[#17201d]">{name}</h3>
+                <p className="mt-2 text-sm font-semibold leading-6 text-[#8a6b2f]">{role}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -441,7 +499,7 @@ export default function Home() {
               A practical finance office for compliance-heavy businesses.
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#5b665f]">
-              Inspired by mature CPA firm service models, the site gives clients a clear route to tax, accounting, consulting, and self-service tools while keeping the India-focused CA and CMA capabilities of BRAM & Co. LLP visible.
+              The homepage is organized around the work clients most often need to move forward: audit readiness, tax/GST compliance, cost records, MCA filings, books, reconciliations and management reporting.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -456,31 +514,83 @@ export default function Home() {
       </section>
 
       <section className="bg-[#e9e3d6] py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1fr]">
-          <div className="bg-[#17201d] p-8 text-white sm:p-10">
-            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#f1d79d]">Why BRAM</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-normal">
-              Built for modern challenges, sustained capacity, and one-point accountability.
-            </h2>
-            <p className="mt-6 leading-8 text-[#ede7dc]">
-              The firm profile describes BRAM & Co. LLP as a growing one-point solution enterprise, strengthened by manpower, professional collaboration, technology adoption, and broad client exposure across private companies, infrastructure, retail, logistics, education, hospitality, and non-profit organizations.
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="mb-10 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">When to contact BRAM</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-normal text-[#17201d] sm:text-5xl">
+                Clear routes for different client situations.
+              </h2>
+            </div>
+            <p className="text-base leading-7 text-[#5b665f]">
+              Instead of one generic enquiry, choose the business situation closest to yours. It helps the team identify documents, timelines and the right professional desk faster.
             </p>
           </div>
-          <div className="grid gap-4">
-            {offices.map((office) => (
-              <div key={office} className="border border-[#d4c9b5] bg-[#f7f5ef] p-5 text-[#344039]">
-                {office}
-              </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {clientPathways.map((pathway) => (
+              <article key={pathway.title} className="border border-[#d4c9b5] bg-[#f7f5ef] p-6">
+                <h3 className="text-xl font-semibold tracking-normal text-[#17201d]">{pathway.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-[#5b665f]">{pathway.detail}</p>
+              </article>
             ))}
-            <div className="border border-[#d4c9b5] bg-white p-5">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8a6b2f]">Registrations</p>
-              <p className="mt-3 text-[#344039]">PAN: ABAFB5010G | GST: 09ABAFB5010G1ZZ</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">How work moves</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-normal text-[#17201d] sm:text-5xl">
+              A simple delivery rhythm from first call to closure.
+            </h2>
+            <p className="mt-6 text-base leading-7 text-[#5b665f]">
+              The process keeps client effort visible: what is needed, who owns it, what has been filed or reviewed, and what remains for the next compliance cycle.
+            </p>
+            <div className="mt-8 grid gap-4">
+              {offices.map((office) => (
+                <div key={office} className="border border-[#ddd3c0] bg-[#f7f5ef] p-4 text-sm font-semibold text-[#344039]">
+                  {office}
+                </div>
+              ))}
             </div>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {deliveryModel.map(([step, title, detail]) => (
+              <article key={title} className="border border-[#ddd3c0] bg-white p-6 shadow-sm">
+                <p className="grid size-10 place-items-center bg-[#17201d] text-sm font-bold text-[#f1d79d]">{step}</p>
+                <h3 className="mt-5 text-2xl font-semibold tracking-normal text-[#17201d]">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-[#5b665f]">{detail}</p>
+              </article>
+            ))}
+            <article className="border border-[#ddd3c0] bg-[#17201d] p-6 text-white shadow-sm md:col-span-2">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#f1d79d]">Registrations</p>
+              <p className="mt-3 text-sm leading-6 text-[#ede7dc]">PAN: ABAFB5010G | GST: 09ABAFB5010G1ZZ</p>
+            </article>
           </div>
         </div>
       </section>
 
       <section id="tools" className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
+        <div className="mb-16 grid gap-10 border-b border-[#ddd3c0] pb-16 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">Profile experience</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-normal text-[#17201d] sm:text-5xl">
+              Sector exposure that makes the first conversation sharper.
+            </h2>
+            <p className="mt-6 text-base leading-7 text-[#5b665f]">
+              The firm profile reflects work across manufacturing, infrastructure, logistics, retail technology, education, healthcare, hospitality, media and non-profit organizations. That breadth helps BRAM ask better questions at the start.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {sectorHighlights.map((sector) => (
+              <div key={sector} className="border border-[#ddd3c0] bg-white p-5 text-sm font-semibold leading-6 text-[#344039] shadow-sm">
+                {sector}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">Client service tools</p>
@@ -661,8 +771,8 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-4 text-[#ede7dc]">
-            <a href="mailto:bramandcollp@gmail.com" className="border border-white/14 bg-white/8 p-5 transition hover:border-[#c7a15a]">
-              Email: bramandcollp@gmail.com
+            <a href="mailto:umvlegalassociates@gmail.com" className="border border-white/14 bg-white/8 p-5 transition hover:border-[#c7a15a]">
+              Email: umvlegalassociates@gmail.com
             </a>
             <a href="tel:+919999289826" className="border border-white/14 bg-white/8 p-5 transition hover:border-[#c7a15a]">
               Mobile: +91 9999289826
@@ -680,12 +790,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-[#d8c08a]/30 bg-[#111815] px-5 py-8 text-sm text-[#c7c1b6] sm:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 sm:flex-row">
-          <p>BRAM & Co. LLP, Chartered Accountants and Cost Accountants</p>
-          <p>Professional website concept built from the firm profile and public CPA service patterns.</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

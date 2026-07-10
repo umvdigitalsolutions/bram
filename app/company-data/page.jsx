@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import Footer from "../component/Footer";
+import Header from "../component/Header";
 
 export default function CompanyDataPage() {
   const [query, setQuery] = useState("");
@@ -110,25 +111,7 @@ export default function CompanyDataPage() {
 
   return (
     <main className="min-h-screen bg-[#f7f5ef] text-[#17201d]">
-      <header className="border-b border-[#d8c08a]/30 bg-[#17201d] text-white">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-          <Link href="/" className="flex items-center gap-3" aria-label="BRAM & Co. home">
-            <span className="grid size-11 place-items-center rounded bg-[#c7a15a] text-sm font-black text-[#17201d]">B</span>
-            <span>
-              <span className="block text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
-              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered & Cost Accountants</span>
-            </span>
-          </Link>
-          <nav className="hidden items-center gap-7 text-sm text-[#ede7dc] md:flex">
-            <Link href="/" className="hover:text-[#c7a15a]">Home</Link>
-            <Link href="/about" className="hover:text-[#c7a15a]">About</Link>
-            <Link href="/services" className="hover:text-[#c7a15a]">Services</Link>
-            <Link href="/tools" className="hover:text-[#c7a15a]">Tools</Link>
-            <Link href="/company-data" className="font-semibold text-[#f1d79d] hover:text-[#c7a15a]">Company data</Link>
-            <Link href="/contact" className="hover:text-[#c7a15a]">Contact</Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <section className="bg-[#17201d] px-5 py-24 text-white sm:px-8">
         <div className="mx-auto max-w-7xl">
@@ -223,6 +206,7 @@ export default function CompanyDataPage() {
           ) : null}
         </article>
       </section>
+      <Footer />
     </main>
   );
 }

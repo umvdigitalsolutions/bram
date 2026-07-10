@@ -1,4 +1,6 @@
-import Link from "next/link";
+import Image from "next/image";
+import Footer from "../component/Footer";
+import Header from "../component/Header";
 
 const partners = [
   {
@@ -9,7 +11,9 @@ const partners = [
     focus:
       "Leads complex audit, cost accounting, GST, tax assessment, and strategic compliance assignments with a strong command of finance controls.",
     profile:
-      "Manish anchors the firm profile and partner-led delivery model. His work spans CA, CMA and GST assignments, with particular strength in cost audit, internal audit, statutory audit, assessments and client advisory for compliance-heavy businesses.",
+      "Manish anchors the firm profile and partner-led delivery model. A CA, CMA and LLB professional with AIR 1 in CMA, his work spans statutory audits, cost audits, financial consulting, taxation, corporate compliance and strategic financial planning.",
+    image: "/partners/manish-malik-profile.jpg",
+    imageClass: "object-cover object-center",
   },
   {
     name: "Ayush Khandelwal",
@@ -20,6 +24,7 @@ const partners = [
       "Works across audit execution, GST compliance, accounting systems, tax documentation, and client coordination for recurring finance operations.",
     profile:
       "Ayush supports the Noida leadership desk with a practical blend of audit, tax and recurring compliance oversight. He helps convert technical requirements into clear work plans, document lists and delivery timelines for business clients.",
+    image: null,
   },
   {
     name: "Akshay Sharma",
@@ -30,6 +35,8 @@ const partners = [
       "Supports corporate compliance, statutory audit, MCA matters, assessment preparation, and process-driven advisory for business clients.",
     profile:
       "Akshay connects the Noida and Delhi network for statutory, corporate and compliance assignments. His profile is useful for clients that need responsive documentation, MCA coordination, audit support and issue-wise assessment preparation.",
+    image: "/partners/akshay.png",
+    imageClass: "object-contain object-top",
   },
   {
     name: "Rishab Jain",
@@ -40,6 +47,8 @@ const partners = [
       "Focuses on Delhi client relationships, tax audit, GST compliance, bookkeeping oversight, and documentation discipline for growing enterprises.",
     profile:
       "Rishab strengthens the Delhi branch presence and client-facing compliance desk. He works closely with entrepreneurs and operating teams that need structured books, timely filings, audit schedules and tax-ready records.",
+    image: "/partners/rishab-jain-profile.jpg",
+    imageClass: "object-cover object-center",
   },
   {
     name: "Bhawana Jain",
@@ -49,7 +58,9 @@ const partners = [
     focus:
       "Works with partner-led compliance delivery across audit, tax, MCA, accounting, and client support from the Delhi office network.",
     profile:
-      "Bhawana supports the branch office network with a focus on disciplined compliance execution and client communication. Her role reinforces BRAM's ability to serve clients through both head-office expertise and local branch accessibility.",
+      "Bhawana supports the branch office network with disciplined compliance execution, client communication, taxation, reporting, auditing and advisory support. Her profile includes FCA standing, international taxation learning and CSR certification.",
+    image: "/partners/bhawana-jain-profile.jpg",
+    imageClass: "object-cover object-center",
   },
   {
     name: "Renu Sehgal",
@@ -59,18 +70,42 @@ const partners = [
     focus:
       "Leads the cost accountants desk for cost audit, cost records, cost control, CMA reporting and sector-specific cost compliance.",
     profile:
-      "Renu Sehgal strengthens the leadership bench with dedicated cost accounting capability through MM & Co. Her role brings focused CMA depth to manufacturing, infrastructure and other regulated sectors where cost records, cost audit and cost control discipline are critical.",
+      "Renu Sehgal strengthens the leadership bench with dedicated cost accounting capability through MM & Co. A CMA with AIR 16, B.Com and M.Com, her work covers accounting, GST, reconciliations, foreign transactions, ECB compliance, FEMA-linked matters and statutory financial discipline.",
+    image: "/partners/renu1.png",
+    imageClass: "object-contain object-center",
   },
 ];
 
 const networkPartners = [
   {
-    name: "Bharat",
+    name: "Dr Aman Singh",
+    role: "Founder Partner / Assam Lead",
+    credential: "MCA, PhD",
+    office: "Guwahati, Assam",
+    profile:
+      "Dr Aman Singh brings operating leadership, client acquisition, relationship management, vendor sourcing, business development and training capability to the wider BRAM network.",
+    image: "/partners/aman.png",
+    imageClass: "object-contain object-top",
+  },
+  {
+    name: "Kuranganayani Chetia",
+    role: "Founder Partner / Education Lead",
+    credential: "JNU Alumni",
+    office: "Guwahati, Assam",
+    profile:
+      "Kuranganayani Chetia supports the Assam leadership desk with a strong education and mentoring background, including civil service training initiatives and institutional development work.",
+    image: "/partners/kuru.png",
+    imageClass: "object-contain object-top",
+  },
+  {
+    name: "Bharat Singh Prajapat",
     role: "Branch Partner / Network Lead",
     credential: "Sonipat branch office",
     office: "Kundli, Sonipat",
     profile:
       "Bharat leads the Sonipat branch touchpoint for clients around Kundli and nearby industrial areas. The office supports coordination, document collection, compliance communication and local relationship coverage for BRAM assignments.",
+    image: "/partners/bharat.png",
+    imageClass: "object-contain object-top",
   },
   {
     name: "Ekta Parmar",
@@ -79,6 +114,8 @@ const networkPartners = [
     office: "Mira Road East, Thane, Mumbai",
     profile:
       "Ekta leads the Mumbai associate company secretarial desk. The association supports corporate law, secretarial, board documentation and filing-linked coordination where clients need specialist company law execution.",
+    image: "/partners/ekta.jpeg",
+    imageClass: "object-cover object-top",
   },
 ];
 
@@ -104,11 +141,20 @@ const officeNetwork = [
   {
     type: "Branch office",
     location: "Kundli, Sonipat",
-    lead: "Bharat",
+    lead: "Bharat Singh Prajapat",
     address: "15, 1st Floor, Khatri Market, Near Makhan Bhog, Kundli, Sonipat 121028",
     contact: "+91 8295201044",
     description:
       "The Sonipat branch provides local coverage for clients around Kundli, including document coordination, compliance follow-up and branch-level client support.",
+  },
+  {
+    type: "Branch office",
+    location: "Guwahati, Assam",
+    lead: "Dr Aman Singh and Kuranganayani Chetia",
+    address: "Phunu Chetia Complex, Bataguli, Panjabari Main Road, Guwahati, Assam 781037",
+    contact: "+91 9811008817 | bramco.ghy@gmail.com",
+    description:
+      "The Assam office extends BRAM's services and courses presence with education, training, operations and regional client coordination capability.",
   },
   {
     type: "Branch office",
@@ -141,6 +187,8 @@ const officeNetwork = [
 
 const strengths = [
   "Chartered Accountancy, Cost Accountancy, GST, direct tax, and compliance under one coordinated desk.",
+  "Practice roots from 2016 with a profile that presents 150+ services and courses under one roof.",
+  "Accessible, approachable and accountable client service with seamless, systematic and streamlined solutions.",
   "Experience across manufacturing, infrastructure, logistics, retail technology, hospitality, education, shipping, and non-profit clients.",
   "Noida head office with Delhi, Sonipat, Mumbai, and specialist associate support.",
   "Profile-backed work across cost audit, GST audit, tax audit, internal audit, statutory audit, MCA, TDS, transfer pricing, customs, and assessments.",
@@ -155,25 +203,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#f7f5ef] text-[#17201d]">
-      <header className="border-b border-[#d8c08a]/30 bg-[#17201d] text-white">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-          <Link href="/" className="flex items-center gap-3" aria-label="BRAM & Co. home">
-            <span className="grid size-11 place-items-center rounded bg-[#c7a15a] text-sm font-black text-[#17201d]">B</span>
-            <span>
-              <span className="block text-lg font-semibold tracking-wide">BRAM & Co. LLP</span>
-              <span className="block text-xs uppercase tracking-[0.22em] text-[#d8d2c5]">Chartered & Cost Accountants</span>
-            </span>
-          </Link>
-          <nav className="hidden items-center gap-7 text-sm text-[#ede7dc] md:flex">
-            <Link href="/" className="hover:text-[#c7a15a]">Home</Link>
-            <Link href="/about" className="font-semibold text-[#f1d79d] hover:text-[#c7a15a]">About</Link>
-            <Link href="/services" className="hover:text-[#c7a15a]">Services</Link>
-            <Link href="/tools" className="hover:text-[#c7a15a]">Tools</Link>
-            <Link href="/company-data" className="hover:text-[#c7a15a]">Company data</Link>
-            <Link href="/contact" className="hover:text-[#c7a15a]">Contact</Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <section className="bg-[#17201d] px-5 py-24 text-white sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
@@ -183,15 +213,15 @@ export default function AboutPage() {
               CA and cost-accounting leadership for modern Indian businesses.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-[#d8d2c5]">
-              BRAM & Co. LLP was established on 20.12.2022 and has grown as a one-point professional service enterprise for chartered accountancy, cost accountancy, GST, audit, tax, and corporate compliance work.
+              BRAM&apos;s practice roots trace to 2016, with BRAM & Co. LLP established on 20.12.2022 as a one-point professional service enterprise for chartered accountancy, cost accountancy, GST, audit, tax, education and corporate compliance work.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
               ["6", "Leadership profiles"],
-              ["6", "Network offices"],
+              ["7", "Network offices"],
               ["17+", "Team members"],
-              ["18", "Practice areas"],
+              ["150+", "Services & courses"],
             ].map(([value, label]) => (
               <div key={label} className="border border-white/14 bg-white/8 p-5">
                 <p className="text-3xl font-semibold text-white">{value}</p>
@@ -214,7 +244,21 @@ export default function AboutPage() {
         </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {partners.map((partner) => (
-            <article key={partner.name} className="border border-[#ddd3c0] bg-white p-6 shadow-sm">
+            <article key={partner.name} className="overflow-hidden border border-[#ddd3c0] bg-white shadow-sm">
+              <div className="relative aspect-[4/3] bg-white">
+                {partner.image ? (
+                  <Image
+                    src={partner.image}
+                    alt={`${partner.name} profile photo`}
+                    fill
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className={partner.imageClass || "object-cover object-center"}
+                  />
+                ) : (
+                  <div className="h-full bg-[#f7f5ef]" aria-label={`${partner.name} profile photo pending`} />
+                )}
+              </div>
+              <div className="p-6">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#8a6b2f]">{partner.role}</p>
               <h3 className="mt-3 text-2xl font-semibold tracking-normal text-[#17201d]">{partner.name}</h3>
               <p className="mt-2 font-semibold text-[#516057]">{partner.credential}</p>
@@ -223,6 +267,7 @@ export default function AboutPage() {
               <p className="mt-4 border-t border-[#ddd3c0] pt-4 text-sm leading-6 text-[#5b665f]">
                 {partner.profile}
               </p>
+              </div>
             </article>
           ))}
         </div>
@@ -268,14 +313,27 @@ export default function AboutPage() {
             The network partner profiles represent branch and associate professionals named in the firm profile. They extend reach, client coordination and specialist execution across locations, while cost accounting leadership is anchored by Renu Sehgal.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {networkPartners.map((partner) => (
-            <article key={partner.name} className="border border-[#ddd3c0] bg-white p-6 shadow-sm">
+            <article key={partner.name} className="overflow-hidden border border-[#ddd3c0] bg-white shadow-sm">
+              {partner.image ? (
+                <div className="relative aspect-[4/3] bg-white">
+                  <Image
+                    src={partner.image}
+                    alt={`${partner.name} profile photo`}
+                    fill
+                    sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    className={partner.imageClass || "object-cover object-center"}
+                  />
+                </div>
+              ) : null}
+              <div className="p-6">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#8a6b2f]">{partner.role}</p>
               <h3 className="mt-3 text-2xl font-semibold tracking-normal text-[#17201d]">{partner.name}</h3>
               <p className="mt-2 font-semibold text-[#516057]">{partner.credential}</p>
               <p className="mt-1 text-sm font-semibold text-[#8a6b2f]">{partner.office}</p>
               <p className="mt-4 leading-7 text-[#5b665f]">{partner.profile}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -297,6 +355,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <Footer />
     </main>
   );
 }
