@@ -3,7 +3,7 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 
 const contacts = [
-  ["Email", "umvlegalassociates@gmail.com", "mailto:umvlegalassociates@gmail.com"],
+  ["Email", "infobramandcollp@gmail.com", "mailto:infobramandcollp@gmail.com"],
   ["Mobile", "+91 9999289826", "tel:+919999289826"],
   ["Mobile", "+91 9910118586", "tel:+919910118586"],
   ["Mobile", "+91 8860930404", "tel:+918860930404"],

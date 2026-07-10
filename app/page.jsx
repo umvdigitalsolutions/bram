@@ -771,8 +771,8 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-4 text-[#ede7dc]">
-            <a href="mailto:umvlegalassociates@gmail.com" className="border border-white/14 bg-white/8 p-5 transition hover:border-[#c7a15a]">
-              Email: umvlegalassociates@gmail.com
+            <a href="mailto:infobramandcollp@gmail.com" className="border border-white/14 bg-white/8 p-5 transition hover:border-[#c7a15a]">
+              Email: infobramandcollp@gmail.com
             </a>
             <a href="tel:+919999289826" className="border border-white/14 bg-white/8 p-5 transition hover:border-[#c7a15a]">
               Mobile: +91 9999289826
