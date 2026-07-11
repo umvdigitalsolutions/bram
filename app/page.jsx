@@ -7,32 +7,32 @@ const serviceLines = [
   {
     title: "Audit and Assurance",
     detail:
-      "Statutory audit, internal audit, stock and fixed asset audit, GST audit, tax audit, vendor reconciliation, and cost audit support.",
+      "Statutory audit, Internal audit, Stock and fixed asset audit, GST audit, Tax audit, Vendor reconciliation, and Cost audit support.",
   },
   {
     title: "Tax and GST",
     detail:
-      "Income tax, GST compliances, TDS, scrutiny, assessments, appeals, return planning, and practical compliance calendars.",
+      "Income tax, GST compliances, TDS, Scrutiny, Assessments, Appeals, Return planning, and Practical compliance calendars.",
   },
   {
     title: "Cost Accounting",
     detail:
-      "Cost records, cost audit, MIS reporting, margin diagnostics, and controls for manufacturing, infrastructure, logistics, and services.",
+      "Cost records, Cost audit, MIS reporting, Margin diagnostics, and Controls for manufacturing, Infrastructure, Logistics, and Services.",
   },
   {
     title: "Corporate Compliance",
     detail:
-      "MCA filings, company secretarial coordination, transfer pricing support, custom compliances, and documentation readiness.",
+      "MCA filings, Company secretarial coordination, Transfer pricing support, Customs compliances, and Documentation readiness.",
   },
   {
     title: "Accounting Desk",
     detail:
-      "Bookkeeping, periodic closing, reconciliations, financial statements, payroll inputs, and management reporting for growing teams.",
+      "Bookkeeping, Periodic closing, Reconciliations, Financial statements, Payroll inputs, and Management reporting for growing teams.",
   },
   {
     title: "Business Advisory",
     detail:
-      "Decision support, process review, outsourced finance office, controls, diligence support, and founder-friendly financial guidance.",
+      "Decision support, Process review, Outsourced finance office, Controls, Diligence support, and Founder-friendly financial guidance.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function Home() {
               Precision finance for companies that cannot afford uncertainty.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#ede7dc]">
-              A Noida-headquartered CA and Cost Accountants firm for audit, tax, GST, cost records, MCA compliance, accounting operations and finance advisory, built for businesses that need clarity before deadlines become pressure.
+              A Noida-headquartered multidisciplinary firm of CA and CMA delivering integrated solutions in Audit, Taxation, GST, Accounting, Company Law, ROC Compliance and Corporate Advisory to businesses across India—ensuring businesses remain compliant before deadlines become challenges.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="inline-flex h-12 items-center justify-center bg-[#c7a15a] px-6 text-sm font-bold text-[#17201d] transition hover:bg-[#e0bd73]">
@@ -164,12 +164,12 @@ export default function Home() {
             </div>
           </div>
           <aside className="mt-12 border border-white/18 bg-white/10 p-6 backdrop-blur-md lg:ml-auto lg:mt-0 lg:w-[420px]">
-            <p className="text-sm uppercase tracking-[0.25em] text-[#f1d79d]">Firm profile</p>
+            <p className="text-sm uppercase tracking-[0.25em] text-[#f1d79d]">Firm at a glance</p>
             <div className="mt-6 grid grid-cols-2 gap-4">
               {[
                 ["2016", "Practice roots"],
-                ["17+", "Team members"],
-                ["150+", "Services & courses"],
+                ["17+", "Experienced team members"],
+                ["500+", "Corporate clients served"],
                 ["7", "Office network"],
               ].map(([value, label]) => (
                 <div key={label} className="border border-white/14 bg-[#17201d]/45 p-4">
@@ -179,7 +179,7 @@ export default function Home() {
               ))}
             </div>
             <p className="mt-6 text-sm leading-6 text-[#ede7dc]">
-              Leadership combines Manish Malik, Ayush Khandelwal, Akshay Sharma, Rishab Jain, Bhawana Jain and Renu Sehgal across CA, CMA, audit, tax, GST, MCA and cost-accounting work.
+              A multidisciplinary leadership team comprising CA Manish Malik, CA Ayush Khandelwal, CA Akshay Sharma, CA Rishab Jain, CA Bhawana Jain and CMA Renu Sehgal, offering integrated CA, CS and CMA professional services under one roof.
             </p>
           </aside>
         </div>
@@ -200,10 +200,10 @@ export default function Home() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">What we handle</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-normal text-[#17201d] sm:text-5xl">
-              A practical finance office for compliance-heavy businesses.
+              Why Businesses Choose BRAM & Co. LLP
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#5b665f]">
-              BRAM & Co. LLP supports statutory audit, cost audit, GST, income tax, MCA compliance, bookkeeping, reconciliations and management reporting through one coordinated professional desk.
+              BRAM & Co. LLP provides comprehensive audit, taxation, corporate compliance, accounting and advisory services, helping businesses stay compliant, manage risk and build long-term success.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -221,12 +221,13 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="mb-10 grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">When to contact BRAM</p>
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">Whatever Your Business Challenge, BRAM &amp; Co. LLP Has the Solution</p>
               <h2 className="mt-4 text-4xl font-semibold tracking-normal text-[#17201d] sm:text-5xl">
-                Clear routes for different client situations.
+                Choose Your Route. We&apos;ll Handle the Rest.
               </h2>
               <p className="mt-6 text-base leading-7 text-[#5b665f]">
-                Select the route that best matches the assignment so the first discussion can begin with the right records, timelines and review points.
+                <span className="font-semibold text-[#344039]">Find the right route for your business needs.</span>{" "}
+                Select the route that best matches your requirements so our first discussion can focus on your business objectives, required documentation, key timelines and the most effective way forward.
               </p>
             </div>
             <div className="border border-[#cfc3ad] bg-[#17201d] p-6 text-white shadow-sm">
@@ -281,8 +282,8 @@ export default function Home() {
               </article>
             ))}
             <article className="border border-[#ddd3c0] bg-[#17201d] p-6 text-white shadow-sm md:col-span-2">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#f1d79d]">Registrations</p>
-              <p className="mt-3 text-sm leading-6 text-[#ede7dc]">PAN: ABAFB5010G | GST: 09ABAFB5010G1ZZ</p>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#f1d79d]">BRAM Legal &amp; Registration Details</p>
+              <p className="mt-3 text-sm leading-6 text-[#ede7dc]">LLPIN: ABZ-5410 | PAN: ABAFB5010G | GST: 09ABAFB5010G1ZZ</p>
             </article>
           </div>
         </div>

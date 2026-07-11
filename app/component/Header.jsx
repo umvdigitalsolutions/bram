@@ -25,34 +25,34 @@ export default function Header({ fixed = false }) {
 
   return (
     <header
-      className={`z-50 border-b border-[#d8c08a]/25 bg-[#17201d]/96 text-white shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl ${
+      className={`z-50 border-b border-white/60 bg-white/78 text-[#17201d] shadow-[0_18px_45px_rgba(23,32,29,0.10)] backdrop-blur-2xl ${
         fixed ? "fixed inset-x-0 top-0" : "relative"
       }`}
     >
-      <div className="h-1 bg-[#c7a15a]" />
-      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
+      <div className="h-1 bg-gradient-to-r from-[#17201d] via-[#c7a15a] to-[#17201d]" />
+      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 py-2 sm:px-8">
         <Link href="/" className="group flex min-w-0 items-center" aria-label="BRAM & Co. home">
-          <span className="relative block h-16 w-16 shrink-0 overflow-hidden drop-shadow-[0_12px_24px_rgba(0,0,0,0.28)] transition duration-300 group-hover:brightness-110 sm:h-[72px] sm:w-[72px]">
+          <span className="relative block h-20 w-52 shrink-0 overflow-visible transition duration-300 group-hover:brightness-110 sm:h-[88px] sm:w-60">
             <Image
-              src="/bram-logo-transparent.png"
+              src="/bramco.png"
               alt="BRAM & Co. LLP logo"
               fill
               priority
-              sizes="72px"
+              sizes="240px"
               className="object-contain"
             />
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/7 p-1 text-sm text-[#ede7dc] lg:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-[#17201d]/10 bg-white/62 p-1 text-sm text-[#34413b] shadow-[inset_0_1px_0_rgba(255,255,255,0.72),0_10px_28px_rgba(23,32,29,0.08)] lg:flex">
           {navItems.map(([label, href]) => (
             <Link
               key={href}
               href={href}
               className={`rounded-full px-4 py-2 font-semibold transition ${
                 isActive(href)
-                  ? "bg-[#c7a15a] text-[#17201d]"
-                  : "hover:bg-white/10 hover:text-[#f1d79d]"
+                  ? "bg-[#17201d] text-white shadow-[0_8px_18px_rgba(23,32,29,0.18)]"
+                  : "hover:bg-[#f3ead7] hover:text-[#17201d]"
               }`}
             >
               {label}
@@ -63,13 +63,13 @@ export default function Header({ fixed = false }) {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+919718324334"
-            className="border border-[#c7a15a]/70 px-4 py-2 text-sm font-bold text-[#f8e8c2] transition hover:bg-[#c7a15a] hover:text-[#17201d]"
+            className="border border-[#c7a15a]/80 bg-white/45 px-4 py-2 text-sm font-bold text-[#17201d] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] transition hover:bg-[#f1d79d]"
           >
             Call office
           </a>
           <Link
             href="/contact"
-            className="bg-[#f1d79d] px-4 py-2 text-sm font-bold text-[#17201d] transition hover:bg-white"
+            className="bg-[#17201d] px-4 py-2 text-sm font-bold text-white shadow-[0_12px_24px_rgba(23,32,29,0.18)] transition hover:bg-[#c7a15a] hover:text-[#17201d]"
           >
             Send enquiry
           </Link>
@@ -78,7 +78,7 @@ export default function Header({ fixed = false }) {
         <button
           type="button"
           onClick={() => setOpen((current) => !current)}
-          className="relative inline-flex size-11 items-center justify-center border border-white/18 bg-white/8 text-[#f1d79d] lg:hidden"
+          className="relative inline-flex size-11 items-center justify-center border border-[#17201d]/12 bg-white/65 text-[#17201d] shadow-[0_8px_22px_rgba(23,32,29,0.10)] lg:hidden"
           aria-expanded={open}
           aria-label="Toggle navigation"
         >
@@ -101,7 +101,7 @@ export default function Header({ fixed = false }) {
       </div>
 
       {open ? (
-        <div className="border-t border-white/10 bg-[#17201d] px-5 pb-5 sm:px-8 lg:hidden">
+        <div className="border-t border-[#17201d]/10 bg-white/88 px-5 pb-5 shadow-[0_18px_38px_rgba(23,32,29,0.10)] backdrop-blur-2xl sm:px-8 lg:hidden">
           <nav className="mx-auto grid max-w-7xl gap-2 pt-4 text-sm">
             {navItems.map(([label, href]) => (
               <Link
@@ -110,8 +110,8 @@ export default function Header({ fixed = false }) {
                 onClick={() => setOpen(false)}
                 className={`border px-4 py-3 font-semibold transition ${
                   isActive(href)
-                    ? "border-[#c7a15a] bg-[#c7a15a] text-[#17201d]"
-                    : "border-white/12 bg-white/7 text-[#ede7dc] hover:border-[#c7a15a]"
+                    ? "border-[#17201d] bg-[#17201d] text-white"
+                    : "border-[#17201d]/10 bg-white/65 text-[#34413b] hover:border-[#c7a15a] hover:text-[#17201d]"
                 }`}
               >
                 {label}
@@ -119,7 +119,7 @@ export default function Header({ fixed = false }) {
             ))}
             <a
               href="tel:+919718324334"
-              className="border border-[#c7a15a]/70 px-4 py-3 text-center font-bold text-[#f8e8c2]"
+              className="border border-[#c7a15a]/80 bg-[#f1d79d]/50 px-4 py-3 text-center font-bold text-[#17201d]"
             >
               Call office
             </a>

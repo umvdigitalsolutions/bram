@@ -49,6 +49,26 @@ export default function Footer() {
             <a href="tel:+919718324334" className="transition hover:text-[#f1d79d]">
               +91 9718324334
             </a>
+            <a
+              href="https://www.instagram.com/bram_and_co?igsh=Y3g5anhhcXV4dnlq"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow BRAM & Co. LLP on Instagram"
+              className="mt-1 inline-flex size-10 items-center justify-center border border-white/20 text-[#d8d2c5] transition hover:border-[#c7a15a] hover:bg-[#c7a15a] hover:text-[#17201d]"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="size-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
             <p className="leading-6 text-[#bdb5a8]">B-33, First Floor, Sector 63, Noida 201301</p>
           </div>
         </div>

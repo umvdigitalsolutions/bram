@@ -3,7 +3,7 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 
 const services = [
-  ["Audit and Assurance", "Statutory audit, internal audit, GST audit, tax audit, stock and fixed asset audit, vendor reconciliation, and control review."],
+  ["Audit and Assurance", "Statutory audit, Internal audit, GST audit, Tax audit, Stock and fixed asset audit, Vendor reconciliation, and Control review."],
   ["Cost Audit and Records", "Cost audit, cost records, product group mapping, cost center design, overhead allocation, and MIS readiness."],
   ["GST and Indirect Tax", "GST registration support, returns, reconciliations, workshops, notices, scrutiny, appeals, and input credit risk review."],
   ["Income Tax and TDS", "Tax audit, return support, TDS compliances, challans, certificates, correction work, assessments, and appeals."],

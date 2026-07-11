@@ -28,7 +28,7 @@ export const metadata = {
       "Chartered accountants and cost accountants in Noida for audit, GST, tax, MCA compliance and finance advisory.",
     url: "https://bramcollp.com",
     siteName: "BRAM & Co. LLP",
-    images: [{ url: "/bram-logo-transparent.png", width: 1254, height: 1254, alt: "BRAM & Co. LLP logo" }],
+    images: [{ url: "/bramco.png", width: 1535, height: 1024, alt: "BRAM & Co. LLP logo" }],
     locale: "en_IN",
     type: "website",
   },
@@ -37,7 +37,7 @@ export const metadata = {
     title: "BRAM & Co. LLP",
     description:
       "Noida CA and cost accountants firm for audit, GST, tax, MCA compliance and advisory.",
-    images: ["/bram-logo-transparent.png"],
+    images: ["/bramco.png"],
   },
 };
 

@@ -15,8 +15,8 @@ const partners = [
       "Leads complex audit, cost accounting, GST, tax assessment, and strategic compliance assignments with a strong command of finance controls.",
     profile:
       "Manish anchors the firm profile and partner-led delivery model. A CA, CMA and LLB professional with AIR 1 in CMA, his work spans statutory audits, cost audits, financial consulting, taxation, corporate compliance and strategic financial planning.",
-    image: "/partners/manish-malik-profile.jpg",
-    imageClass: "object-cover object-center",
+    image: "/partners/manish.png",
+    imageClass: "object-contain object-center",
   },
   {
     name: "Ayush Khandelwal",
