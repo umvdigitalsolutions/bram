@@ -27,7 +27,8 @@ const partners = [
       "Works across audit execution, GST compliance, accounting systems, tax documentation, and client coordination for recurring finance operations.",
     profile:
       "Ayush supports the Noida leadership desk with a practical blend of audit, tax and recurring compliance oversight. He helps convert technical requirements into clear work plans, document lists and delivery timelines for business clients.",
-    image: null,
+    image: "/partners/ayush.png",
+    imageClass: "object-contain object-top",
   },
   {
     name: "Akshay Sharma",
