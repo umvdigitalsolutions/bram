@@ -222,12 +222,24 @@ const officeNetwork = [
 ];
 
 const strengths = [
-  "Chartered Accountancy, Cost Accountancy, GST, direct tax, and compliance under one coordinated desk.",
-  "Practice roots from 2016 with a profile that presents 150+ services and courses under one roof.",
-  "Accessible, approachable and accountable client service with seamless, systematic and streamlined solutions.",
-  "Experience across manufacturing, infrastructure, logistics, retail technology, hospitality, education, shipping, and non-profit clients.",
-  "Noida head office with Delhi, Sonipat, Mumbai, and specialist associate support.",
-  "Profile-backed work across cost audit, GST audit, tax audit, internal audit, statutory audit, MCA, TDS, transfer pricing, customs, and assessments.",
+  {
+    title: "Partner-reviewed work, always.",
+    detail: "Every filing, audit and submission is signed off by a partner—not left to a junior associate.",
+  },
+  {
+    title: "One desk, every discipline.",
+    detail: "Audit, tax, GST, MCA, cost accounting and advisory under a single accountable team.",
+  },
+  {
+    title: "A calendar you can see.",
+    detail: "Clients know what is due, what is filed and what is next—not just what is overdue.",
+  },
+];
+
+const leadershipStructure = [
+  "Manish Malik, Ayush Khandelwal and Akshay Sharma lead the Noida practice desk.",
+  "Rishab Jain and Bhawana Jain lead Delhi audit, tax and compliance delivery.",
+  "Renu Sehgal leads cost accounting, cost audit and CMA assignments.",
 ];
 
 function PartnerPhoto({ partner, sizes, onOpen }) {
@@ -366,24 +378,40 @@ export default function AboutClient() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#f1d79d]">About the firm</p>
             <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-tight tracking-normal sm:text-6xl">
-              CA and cost-accounting leadership for modern Indian businesses.
+              Built by practitioners, not a placement agency.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-[#d8d2c5]">
-              BRAM&apos;s practice roots trace to 2016, with BRAM & Co. LLP established on 20.12.2022 as a one-point professional service enterprise for chartered accountancy, cost accountancy, GST, audit, tax, education and corporate compliance work.
+              BRAM & Co. LLP was founded in 2016 by a group of Chartered and Cost Accountants who saw the same problem repeat across growing Indian businesses: compliance work scattered across freelancers, part-time consultants and disconnected software, with no single point of accountability when a deadline—or a notice—landed.
+            </p>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-[#d8d2c5]">
+              Today, our multidisciplinary leadership team—CA Manish Malik, CA Ayush Khandelwal, CA Akshay Sharma, CA Rishab Jain, CA Bhawana Jain and CMA Renu Sehgal—leads integrated CA, CS and CMA services for over 500 companies, from a head office in Noida and a network of offices across Delhi, Sonipat, Guwahati and associate desks in Mumbai.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {[
-              ["6", "Leadership profiles"],
-              ["7", "Network offices"],
-              ["17+", "Team members"],
-              ["150+", "Services & courses"],
-            ].map(([value, label]) => (
-              <div key={label} className="border border-white/14 bg-white/8 p-5">
-                <p className="text-3xl font-semibold text-white">{value}</p>
-                <p className="mt-2 text-sm text-[#d8d2c5]">{label}</p>
+          <div>
+            <div className="mb-8 flex justify-center">
+              <div className="relative h-52 w-full sm:h-64 lg:h-72">
+                <Image
+                  src="/bramco-transparent.png"
+                  alt="BRAM & Co. LLP"
+                  fill
+                  sizes="(min-width: 1024px) 560px, 100vw"
+                  className="scale-110 object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.32)]"
+                />
               </div>
-            ))}
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                ["6", "Leadership profiles"],
+                ["7", "Network offices"],
+                ["17+", "Team members"],
+                ["500+", "Corporate clients"],
+              ].map(([value, label]) => (
+                <div key={label} className="border border-white/14 bg-white/8 p-5">
+                  <p className="text-3xl font-semibold text-white">{value}</p>
+                  <p className="mt-2 text-sm text-[#d8d2c5]">{label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -394,9 +422,13 @@ export default function AboutClient() {
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">Leadership</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-normal">Experienced hands, direct accountability.</h2>
           </div>
-          <p className="text-base leading-7 text-[#5b665f]">
-            The leadership bench combines Manish Malik, Ayush Khandelwal, Akshay Sharma, Rishab Jain, Bhawana Jain and Renu Sehgal across head-office control, Delhi accessibility, audit, tax, GST, MCA, accounting, cost records and advisory assignments.
-          </p>
+          <div className="grid gap-3">
+            {leadershipStructure.map((item) => (
+              <p key={item} className="border-l-4 border-[#c7a15a] bg-white px-4 py-3 text-sm font-semibold leading-6 text-[#344039]">
+                {item}
+              </p>
+            ))}
+          </div>
         </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {partners.map((partner) => (
@@ -558,13 +590,14 @@ export default function AboutClient() {
       <section className="bg-[#e9e3d6] px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">Firm strengths</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-normal text-[#17201d]">A wider bench for recurring and specialist work.</h2>
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#8a6b2f]">What makes BRAM different</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-normal text-[#17201d]">Accountability built into every engagement.</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {strengths.map((strength) => (
-              <article key={strength} className="border border-[#d4c9b5] bg-[#f7f5ef] p-7">
-                <p className="leading-7 text-[#344039]">{strength}</p>
+              <article key={strength.title} className="border border-[#d4c9b5] bg-[#f7f5ef] p-7">
+                <h3 className="text-xl font-semibold text-[#17201d]">{strength.title}</h3>
+                <p className="mt-3 leading-7 text-[#344039]">{strength.detail}</p>
               </article>
             ))}
           </div>

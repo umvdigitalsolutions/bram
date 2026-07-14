@@ -32,10 +32,10 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#f1d79d]">Contact</p>
           <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-tight tracking-normal sm:text-6xl">
-            Talk to BRAM & Co. LLP about your next compliance or finance requirement.
+            Let&apos;s talk about what&apos;s actually due.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-8 text-[#d8d2c5]">
-            Share your audit, cost accounting, tax, GST, MCA, accounting, assessment, or advisory requirement and the relevant desk can coordinate the next step.
+            Whether you&apos;re starting fresh, responding to a notice, or getting audit-ready—tell us where things stand and we&apos;ll tell you exactly what we need. No generic forms, no waiting on a call-center queue.
           </p>
         </div>
       </section>
