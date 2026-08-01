@@ -70,6 +70,8 @@ const partners = [
     name: "Renu Sehgal",
     role: "Cost Accounting Lead / Associate Partner",
     credential: "Cost Accountant, MM & Co.",
+    linkedPhrase: "MM & Co.",
+    linkedPhraseHref: "https://www.mmncompany.com",
     office: "Sector 63, Noida",
     focus:
       "Leads the cost accountants desk for cost audit, cost records, cost control, CMA reporting and sector-specific cost compliance.",
@@ -269,6 +271,30 @@ function PartnerPhoto({ partner, sizes, onOpen }) {
   );
 }
 
+function LinkedPartnerText({ partner, text }) {
+  if (!partner.linkedPhrase || !partner.linkedPhraseHref || !text.includes(partner.linkedPhrase)) {
+    return text;
+  }
+
+  const parts = text.split(partner.linkedPhrase);
+
+  return parts.map((part, index) => (
+    <span key={`${part}-${index}`}>
+      {part}
+      {index < parts.length - 1 ? (
+        <a
+          href={partner.linkedPhraseHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-[#8a6b2f] underline decoration-[#c7a15a] underline-offset-4 transition hover:text-[#17201d]"
+        >
+          {partner.linkedPhrase}
+        </a>
+      ) : null}
+    </span>
+  ));
+}
+
 function PartnerProfileModal({ partner, onClose }) {
   if (!partner) return null;
 
@@ -323,7 +349,9 @@ function PartnerProfileModal({ partner, onClose }) {
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <div className="border border-[#ddd3c0] bg-white p-4">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#8a6b2f]">Credential</p>
-                  <p className="mt-2 font-semibold text-[#344039]">{partner.credential}</p>
+                  <p className="mt-2 font-semibold text-[#344039]">
+                    <LinkedPartnerText partner={partner} text={partner.credential} />
+                  </p>
                 </div>
                 <div className="border border-[#ddd3c0] bg-white p-4">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#8a6b2f]">Office</p>
@@ -338,7 +366,9 @@ function PartnerProfileModal({ partner, onClose }) {
               ) : null}
               <div className="mt-6">
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#8a6b2f]">Profile</p>
-                <p className="mt-3 text-base leading-8 text-[#5b665f]">{partner.profile}</p>
+                <p className="mt-3 text-base leading-8 text-[#5b665f]">
+                  <LinkedPartnerText partner={partner} text={partner.profile} />
+                </p>
               </div>
             </div>
           </div>
@@ -443,7 +473,9 @@ export default function AboutClient() {
                 <div className="min-h-44">
                   <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#8a6b2f]">{partner.role}</p>
                   <h3 className="mt-3 text-2xl font-semibold tracking-normal text-[#17201d]">{partner.name}</h3>
-                  <p className="mt-2 text-sm font-semibold leading-6 text-[#516057]">{partner.credential}</p>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-[#516057]">
+                    <LinkedPartnerText partner={partner} text={partner.credential} />
+                  </p>
                   <p className="mt-1 text-sm font-semibold leading-6 text-[#8a6b2f]">{partner.office}</p>
                 </div>
                 <button
