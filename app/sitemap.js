@@ -1,4 +1,13 @@
-const routes = ["", "/about", "/services", "/tools", "/company-data", "/contact"];
+const routes = [
+  "",
+  "/about",
+  "/services",
+  "/blog",
+  "/blog/gst-registration-guide",
+  "/tools",
+  "/company-data",
+  "/contact",
+];
 
 export default function sitemap() {
   return routes.map((route) => ({
