@@ -3,6 +3,7 @@ const routes = [
   "/about",
   "/services",
   "/blog",
+  "/blog/tax-planning-strategies-2026",
   "/blog/gst-registration-guide",
   "/tools",
   "/company-data",
