@@ -1,5 +1,26 @@
 export const blogPosts = [
   {
+    "slug": "reduce-business-expenses-india",
+    "title": "How to Reduce Business Expenses Without Affecting Growth in India",
+    "description": "Practical ways for Indian businesses to reduce expenses, improve cash flow, and protect growth through smarter budgeting, procurement, automation, and productivity.",
+    "category": "Business Growth",
+    "readTime": "26 min read",
+    "publishedAt": "2026-09-08",
+    "updatedLabel": "Updated September 2026",
+    "href": "/blog/reduce-business-expenses-india"
+  },
+  {
+    "slug": "questions-before-business-investment",
+    "title": "Why Asking Questions Matters Before Business Investment",
+    "description": "Eight questions to ask before investing in a business, covering the business model, risks, management, fees, liquidity, financial goals, and independent verification.",
+    "category": "Business Investment",
+    "readTime": "24 min read",
+    "publishedAt": "2026-09-08",
+    "updatedLabel": "Updated September 2026",
+    "href": "/blog/questions-before-business-investment"
+  },
+
+  {
     slug: "tax-planning-strategies-2026",
     title: "10 Tax Planning Strategies Every Business Should Know in 2026",
     description:
@@ -24,7 +45,7 @@ export const blogPosts = [
 ];
 
 export const gstRegistrationArticle = {
-  ...blogPosts[1],
+  ...blogPosts.find((post) => post.slug === "gst-registration-guide"),
   intro: [
     "Starting a business in India is easier today than ever before, but running it legally requires understanding one important concept: Goods and Services Tax (GST). Since GST replaced multiple indirect taxes in 2017, it has become an essential part of every business, whether it is a local shop, an online seller, a freelancer, or a growing startup. Yet one question continues to confuse thousands of entrepreneurs: Do I need GST registration?",
     "The answer is not the same for everyone. Some businesses must register from day one, while others can legally operate without GST registration until they cross a certain turnover limit. The requirement depends on factors such as annual revenue, the nature of goods or services supplied, the type of customers served, and whether the business operates across state borders. Ignoring these rules can lead to penalties, interest on unpaid taxes, and unnecessary legal complications.",
@@ -232,7 +253,7 @@ export const gstRegistrationArticle = {
 };
 
 export const taxPlanningStrategiesArticle = {
-  ...blogPosts[0],
+  ...blogPosts.find((post) => post.slug === "tax-planning-strategies-2026"),
   intro: [
     "Running a business in 2026 is more challenging than ever. Inflation, changing regulations, digital transformation, and evolving tax legislation mean that simply filing taxes at the end of the financial year is no longer enough. Successful companies now treat tax planning as a year-round business strategy rather than a seasonal obligation. Businesses that actively plan their taxes often improve cash flow, reduce unnecessary liabilities, and free up capital for expansion.",
     "Recent guidance from tax professionals shows that 2026 brings several planning opportunities driven by legislative updates, new deductions, changing depreciation rules, and increased emphasis on proactive compliance. Experts recommend reviewing tax strategies quarterly instead of waiting until year-end.",

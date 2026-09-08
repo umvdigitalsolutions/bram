@@ -1,10 +1,11 @@
+import { blogPosts } from "./blog/posts";
+
 const routes = [
   "",
   "/about",
   "/services",
   "/blog",
-  "/blog/tax-planning-strategies-2026",
-  "/blog/gst-registration-guide",
+  ...blogPosts.map((post) => post.href),
   "/tools",
   "/company-data",
   "/contact",
