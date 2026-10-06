@@ -1,5 +1,25 @@
 export const blogPosts = [
   {
+    "slug": "gross-profit-vs-net-profit",
+    "title": "Gross Profit vs. Net Profit: What Business Owners Need to Know",
+    "description": "Understand gross profit vs. net profit, formulas, examples, margins, and how both figures help business owners evaluate profitability and operating performance.",
+    "category": "Business Finance",
+    "readTime": "14 min read",
+    "publishedAt": "2026-10-06",
+    "updatedLabel": "Updated October 2026",
+    "href": "/blog/gross-profit-vs-net-profit"
+  },
+  {
+    "slug": "owner-compensation-guide",
+    "title": "Are You Paying Yourself Too Much — or Too Little? A Complete Guide to Owner Compensation",
+    "description": "A practical guide to owner compensation, covering how much business owners should pay themselves, warning signs, cash reserves, profit distributions, and fair pay.",
+    "category": "Business Finance",
+    "readTime": "16 min read",
+    "publishedAt": "2026-10-06",
+    "updatedLabel": "Updated October 2026",
+    "href": "/blog/owner-compensation-guide"
+  },
+  {
     "slug": "reduce-business-expenses-india",
     "title": "How to Reduce Business Expenses Without Affecting Growth in India",
     "description": "Practical ways for Indian businesses to reduce expenses, improve cash flow, and protect growth through smarter budgeting, procurement, automation, and productivity.",

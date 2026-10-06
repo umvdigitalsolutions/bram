@@ -2,6 +2,85 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
+
+function slugifyHeading(heading) {
+  return heading
+    .toLowerCase()
+    .replaceAll(" ", "-")
+    .replaceAll("?", "")
+    .replaceAll(":", "")
+    .replaceAll("—", "")
+    .replaceAll(",", "");
+}
+
+function RichText({ text }) {
+  return <span dangerouslySetInnerHTML={{ __html: text }} />;
+}
+
+function DataTable({ table }) {
+  return (
+    <div className="my-8 overflow-x-auto border border-[#ddd3c0] bg-white">
+      <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+        {table.caption ? (
+          <caption className="bg-[#17201d] px-5 py-3 text-left text-xs font-bold uppercase tracking-[0.18em] text-[#f1d79d]">
+            {table.caption}
+          </caption>
+        ) : null}
+        <thead className="bg-[#efe7d7] text-[#17201d]">
+          <tr>
+            {table.headers.map((header) => (
+              <th key={header} scope="col" className="border-b border-[#d7c9b0] px-5 py-4 font-bold">
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {table.rows.map((row) => (
+            <tr key={row.join("-")} className="border-b border-[#eee5d8] last:border-b-0">
+              {row.map((cell) => (
+                <td key={cell} className="px-5 py-4 leading-6 text-[#4f5c55]">
+                  <RichText text={cell} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function ArticleBlocks({ blocks }) {
+  return (
+    <div className="mt-5 space-y-5 text-base leading-8 text-[#4f5c55]">
+      {blocks.map((block, index) => {
+        if (block.type === "list") {
+          return (
+            <ul key={`${block.type}-${index}`} className="grid gap-3">
+              {block.items.map((item) => (
+                <li key={item} className="border-l-4 border-[#c7a15a] bg-white px-5 py-3 text-sm font-semibold leading-6 text-[#344039] shadow-sm">
+                  <RichText text={item} />
+                </li>
+              ))}
+            </ul>
+          );
+        }
+
+        if (block.type === "table") {
+          return <DataTable key={`${block.type}-${index}`} table={block.table} />;
+        }
+
+        return (
+          <p key={`${block.type}-${index}`}>
+            <RichText text={block.text} />
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function BlogArticle({ article }) {
   return (
     <main className="min-h-screen bg-[#f7f5ef] text-[#17201d]">
@@ -42,23 +121,44 @@ export default function BlogArticle({ article }) {
           <div className="max-w-3xl">
             <div className="mt-10 space-y-6 text-base leading-8 text-[#4f5c55]">
               {article.intro.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraph}>
+                  <RichText text={paragraph} />
+                </p>
               ))}
             </div>
 
             <div className="mt-12 space-y-12">
               {article.sections.map((section) => (
-                <section key={section.heading} id={section.heading.toLowerCase().replaceAll(" ", "-").replaceAll("?", "").replaceAll(":", "")}>
+                <section key={section.heading} id={slugifyHeading(section.heading)}>
                   <h2 className="text-3xl font-semibold tracking-normal text-[#17201d]">
                     {section.heading}
                   </h2>
-                  <div className="mt-5 space-y-5 text-base leading-8 text-[#4f5c55]">
-                    {section.paragraphs?.map((paragraph) => (
-                      <p key={paragraph}>
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
+                  {section.blocks ? (
+                    <ArticleBlocks blocks={section.blocks} />
+                  ) : (
+                    <div className="mt-5 space-y-5 text-base leading-8 text-[#4f5c55]">
+                      {section.paragraphs?.map((paragraph) => (
+                        <p key={paragraph}>
+                          <RichText text={paragraph} />
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                  {section.list ? (
+                    <ul className="mt-6 grid gap-3">
+                      {section.list.map((item) => (
+                        <li key={item} className="border-l-4 border-[#c7a15a] bg-white px-5 py-3 text-sm font-semibold leading-6 text-[#344039] shadow-sm">
+                          <RichText text={item} />
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  {section.table ? <DataTable table={section.table} /> : null}
+                  {section.closing ? (
+                    <p className="mt-5 text-base leading-8 text-[#4f5c55]">
+                      <RichText text={section.closing} />
+                    </p>
+                  ) : null}
                 </section>
               ))}
             </div>
@@ -71,7 +171,9 @@ export default function BlogArticle({ article }) {
                 {article.faqs.map((faq) => (
                   <div key={faq.question} className="border border-[#ddd3c0] bg-white p-5 shadow-sm">
                     <h3 className="text-lg font-semibold text-[#17201d]">{faq.question}</h3>
-                    <p className="mt-3 leading-7 text-[#4f5c55]">{faq.answer}</p>
+                    <p className="mt-3 leading-7 text-[#4f5c55]">
+                      <RichText text={faq.answer} />
+                    </p>
                   </div>
                 ))}
               </div>
